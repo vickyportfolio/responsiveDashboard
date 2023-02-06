@@ -1,0 +1,375 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./dashboard.css">
+    <link rel="stylesheet" href="./media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2],
+          ['Watch TV', 2],
+          ['Sleep',    7]
+        ]);
+
+        var options = {
+          pieHole: 0.4,
+          legend : { position : 'none' },
+          'width':300,
+          'height':250,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Sales', 'Expenses'],
+      ['2004',  1000,      400],
+      ['2005',  1170,      460],
+      ['2006',  660,       1120],
+      ['2007',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Company Performance',
+      curveType: 'function',
+      legend: { position: 'bottom' },
+      'width':300,
+      
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+    chart.draw(data, options);
+  }
+</script> -->
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="dashboardContainer">
+        <!----firstsection--->
+        <nav class="navBarContainer" style="display:none;" >
+            <div style="background-color:#3C3B54; padding:1rem;" >
+            <h4 style="letter-spacing: 2px;color:#ffff;">ACME</h4>
+            </div>
+            <div class="navlistcontainer">
+                <div class="navdis">
+                    <img src="./assets/home.png" alt=""/>
+                    <span>Home</span>
+                </div>
+            </div>
+            <div class="navlistcontainer">
+                <div class="navdis">
+                    <img src="./assets/dashboard.png" alt=""/>
+                    <span>Dashboard</span>
+                </div>
+            </div>
+            <div class="navlistcontainer">
+                <div class="navdis">
+                    <img src="./assets/inbox.png" alt=""/>
+                    <span>inbox</span>
+                </div>
+            </div>
+            <div class="navlistcontainer">
+                <div class="navdis">
+                    <img src="./assets/products.png" alt=""/>
+                    <span>products</span>
+                </div>
+            </div>
+            <div class="navlistcontainer">
+                <div class="navdis">
+                    <img src="./assets/setting.png" alt=""/>
+                    <span>admin</span>
+                </div>
+            </div>
+        </nav>
+        <!----secondsection--->
+        <main>
+            <header>
+                <div class="hleft">
+                    <img src="./assets/dash.png" alt="" id="dashClick" />
+                    <img src="./assets/search.png" alt="" class="searchIcon" />
+                    <input type="text" placeholder="Search transactions" class="searchInput" />
+                </div>
+                <div class="hrightContainer">
+                    <div class="hright">
+                        <img src="./assets/search.png" alt="" style="display:none;" />
+                        <div style="position: relative;">
+                            <img src="./assets/noti.png" alt="" />
+                            <span class="notiMarker"></span>
+                        </div>
+                        <span class="hrightName">John Doe <img src="./assets/arrowdown.png" alt="" /> </span>
+                        <img src="./assets/profile-pic-01.jpg" alt="" class="hprofile">
+                    </div>
+                </div>
+            </header>
+            <div class="dashboardContent">
+                <!----mainheader--->
+                <div class="mainHeader" style="position:relative;">
+                    <h3>Overview</h3>
+                    <div class="fundContainer">
+                        <button class="fundBtn">Addfunds</button>
+                        <span>+</span>
+                    </div>
+                    <div class="grlist popUp" style="display:none;">
+                        <div class="listPopupContainer">
+                            <div class="list profileOpen">
+                                <img src="./assets/profilelogo.png" alt="">
+                                <span>My Profile</span>
+                            </div>
+                            <div class="list">
+                                <img src="./assets/billing.png" alt="">
+                                <span>Billing</span>
+                            </div>
+                            <div class="list">
+                                <img src="./assets/logout.png" alt="">
+                                <span>Log out</span>
+                            </div>
+                         </div>
+                    </div>
+
+                    <div class="gruser popUp" style="display:none;" >
+                        <div class="userPopupContainer">
+                        <div class="userpopup">
+                            <div class="gruserSection">
+                                <div class="gruserNames">
+                                    <img src="./assets/profile-pic-02.jpg" alt="">
+                                    <div style="padding-left: 1.4rem;">
+                                        <h4 >Bavid Kames</h4>
+                                        <span style="color:#43425D; font-size:12px;">
+                                        Assigned you on the call with Sara
+                                        </span>
+                                    </div>
+                                </div>
+                                <span style="color:#43425D; font-size:12px;">2 min ago</span>
+                            </div>
+                            <div class="gruserSection">
+                                <div class="gruserNames">
+                                    <img src="./assets/profile-pic-06.jpg" alt="">
+                                    <div style="padding-left: 1.4rem;">
+                                        <h4>Alexa marry</span><h4>
+                                        <div style="color:#43425D; font-size:12px;">Marked the task <span>New Ui as done</span></div>
+                                    </div>
+                                </div>
+                                <span style="color:#43425D; font-size:12px;">5 min ago</span>
+                            </div>
+                            <div class="gruserSection">
+                                <div class="gruserNames">
+                                    <img src="./assets/profile-pic-05.jpg" alt="">
+                                    <div style="padding-left: 1.4rem;">
+                                        <h4>Drew James/span><h4>
+                                        <span style="color:#43425D; font-size:12px;">Added a new comment on Sales task </span>
+                                    </div>
+                                </div>
+                                <span style="color:#43425D; font-size:12px;">10 min ago</span>
+                            </div>
+                        </div>
+                        <span class="showMore">Show More</span>
+                       </div>
+                    </div>
+                </div>
+                <!----mainsection--->
+                <div class="gridContainer">
+                    <div class="gridleft">
+                        <div class="flexContainer">
+                            <div class="stats" style="padding:1rem;">
+                                <div class="stats-heading">
+                                    <span class="sm-font">Statistics</span>
+                                    <span class="sm-font">Last 6 months <img src="./assets/arrowdown.png" alt="" />
+                                    </span>
+                                </div>
+                                <div style="margin-top:1rem;">
+                                    <!-- <div id="curve_chart"></div> -->
+                                <canvas id="linestyle"
+                                height="200" width="300"></canvas>
+
+                                </div>
+                            
+                            </div>
+                            <div class="graph" style="padding:1rem; position: relative;">
+                                <div>
+                                    <span class="sm-font">Sales Distribution</span>
+                                    <div class="doghnut">
+                                        <canvas id="donutchart"></canvas>
+                                        <span >230,900 Sales</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="report">
+
+                            <div class="tablecontainer">
+                                <span class="sm-font" style="padding-left: 10px; padding-bottom:1rem;">Referrer</span>
+                                <table style="padding-left: 1rem;">
+                                    <tr>
+                                        <td>Location</td>
+                                        <td>Views</td>
+                                        <td>Sales</td>
+                                        <td>Conversion</td>
+                                        <td>Total</td>
+                                    </tr>
+                                    <tr>
+                                        <td>google.com</td>
+                                        <td>3746</td>
+                                        <td>752</td>
+                                        <td>43%</td>
+                                        <td>$19,291</td>
+                                    </tr>
+                                    <tr>
+                                        <td>facebook.com</td>
+                                        <td>8126</td>
+                                        <td>7228</td>
+                                        <td>32%</td>
+                                        <td>$17,638</td>
+                                    </tr>
+                                    <tr>
+                                        <td>twitter.com</td>
+                                        <td>8836</td>
+                                        <td>694</td>
+                                        <td>28%</td>
+                                        <td>$16,218</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Direct,email,IM</td>
+                                        <td>1173</td>
+                                        <td>645</td>
+                                        <td>24%</td>
+                                        <td>$14421</td>
+                                    </tr>
+                                    <tr>
+                                        <td>linkedin.com</td>
+                                        <td>2739</td>
+                                        <td>539</td>
+                                        <td>20%</td>
+                                        <td>$12370</td>
+                                    </tr>
+                                    <tr>
+                                        <td>instagram.com</td>
+                                        <td>2739</td>
+                                        <td>539</td>
+                                        <td>20%</td>
+                                        <td>$12370</td>
+                                    </tr>
+                                </table>
+                                <span class="showMore">Show More</span>
+                            </div>
+                       </div>
+                    </div>
+    
+                     <div class="gridright">
+                        
+                        <div class="gridright-container">
+                        <div class="grProfile">
+                          <img src="./assets/profile-pic-01.jpg" alt="">
+                          <span style="font-size:15px; padding-top:5px;padding-bottom:5px;">Nick Herasimenka</span>
+                          <span style="color:#43425D; font-size:12px;padding-bottom: 10px;">United States</span>
+                          <img src="./assets/grpicons.png" alt="">
+                        </div>
+
+                       
+                       
+                        <div class="grUsers" style="padding:1rem;">
+                          <div class="gruserHead">
+                             <span>Our Users</span>
+                             <img src="./assets/three.png" alt=""/>
+                          </div>
+                          <div class="gruserSection">
+                             <div class="gruserNames">
+                                 <img src="./assets/profile-pic-03.jpg" alt="">
+                                 <div style="padding-left: 1.4rem;">
+                                     <span style="font-size:14px;">Drew James</span><br>
+                                     <span style="color:#43425D; font-size:12px;">United States</span>
+                                 </div>
+                             </div>
+                             <span style="color:#43425D; font-size:12px; padding-top: 1rem;">Mobile: 8715674877</span>
+                          </div>
+                          <div class="gruserSection">
+                             <div class="gruserNames">
+                                 <img src="./assets/profile-pic-02.jpg" alt="">
+                                 <div style="padding-left: 1.4rem;">
+                                     <span style="font-size:14px;">Drew James</span><br>
+                                     <span style="color:#43425D; font-size:12px;">United States</span>
+                                 </div>
+                             </div>
+                             <span style="color:#43425D; font-size:12px; padding-top: 1rem;">Mobile: 8715674877</span>
+                          </div>
+                          <div class="gruserSection">
+                             <div class="gruserNames">
+                                 <img src="./assets/profile-pic-04.jpg" alt="">
+                                 <div style="padding-left: 1.4rem;">
+                                     <span style="font-size:14px;">Drew James</span><br>
+                                     <span style="color:#43425D; font-size:12px;">United States</span>
+                                 </div>
+                             </div>
+                             <span style="color:#43425D; font-size:12px; padding-top: 1rem;">Mobile: 8715674877</span>
+                          </div>
+ 
+                        </div>
+                        </div>
+                        
+                        <div class="gridThree desk" style="margin-top:2rem" >
+                            <div class="grvideo" style="padding:1rem;">
+                           <div class="gruserHead">
+                               <span>Product Video</span>
+                               <img src="./assets/three.png" alt=""/>
+                            </div>
+                            <div  class="videoSection">
+                               <video class="video" style="max-width:100%;" poster="./assets/video thumbnail.png"
+                              Type="Video/Mp4" ></video>
+                              <i class="fa fa-play-circle"></i>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+               
+               <div class="gridThree" style="display:flex;justify-content:center;margin-top:1rem" >
+                <div class="grvideo mob" style="padding:1rem; display:none;">
+               <div class="gruserHead">
+                   <span>Product Video</span>
+                   <img src="./assets/three.png" alt=""/>
+                </div>
+                <div  class="videoSection">
+                   <video class="video" style="max-width:100%;" poster="./assets/video thumbnail.png"
+                  Type="Video/Mp4" ></video>
+                  <i class="fa fa-play-circle"></i>
+                </div>
+                </div>
+                </div>
+             
+               
+                
+                
+
+        </div>
+    </main>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="./dashboard.js"></script>
+</body>
+
+</html>
+
+

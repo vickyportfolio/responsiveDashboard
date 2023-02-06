@@ -1,0 +1,37 @@
+
+/*****Layout*****/
+@media screen and (max-width:1122px) {
+    .gridThree.desk{
+      display: none;
+    }
+    .gridthree>.grvideo.mob{
+        display: block !important;
+    }
+    .gridContainer>.gridleft
+    {
+     grid-row-start: 2;
+     grid-column-start: 1;
+     grid-column-end: 3;
+    }
+    .gridContainer>.gridright
+    {
+     grid-column-start: 1;
+     grid-column-end: 3;
+    }
+  }
+/****graphs***/
+@media screen and (max-width:619px) {
+.flexContainer{
+flex-direction: column;
+}
+}
+/****header***/
+@media screen and (max-width:429px) {
+.searchInput,
+.searchIcon {
+display: none;
+}
+.hright>img:nth-child(1){
+display: block !important;
+}
+}
