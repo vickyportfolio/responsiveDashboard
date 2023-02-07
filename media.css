@@ -24,6 +24,9 @@
 .flexContainer{
 flex-direction: column;
 }
+.tablecontainer tr>td{
+  padding:0rem;
+  }
 }
 /****header***/
 @media screen and (max-width:429px) {

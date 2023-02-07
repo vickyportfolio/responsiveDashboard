@@ -6,8 +6,13 @@ const addFund = document.querySelector('.fundBtn');
 const grlist = document.querySelector('.grlist');
 const profileOpen = document.querySelector('.profileOpen');
 const gruser = document.querySelector('.gruser');
+const video = document.querySelector('.video');
+const videoSection = document.querySelector('.videoSection');
 const linestyle = document.getElementById('linestyle');
 const donutchart = document.getElementById('donutchart');
+const play = document.querySelector('.play');
+const pause = document.querySelector('.pause');
+let isVideo=false;
 dash.addEventListener('click',()=>{
 if(navBarContainer.style.display=='none'){
     navBarContainer.style.display='block';
@@ -41,6 +46,22 @@ gruser.style.display='none';
 },3000);
 gruser.style.display='block';
 })
+videoSection.addEventListener('click',()=>{
+if(!isVideo){
+if(pause.style.display=='block'){
+pause.style.display='none';
+}
+play.style.display='none';
+video.play();
+isVideo=true;
+}else{
+pause.style.display='block';
+video.pause();
+isVideo=false;
+}
+})
+
+
 
 /********graph*****/
 let lineChart = new Chart(linestyle,{

@@ -10,59 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load("current", {packages:["corechart"]});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          pieHole: 0.4,
-          legend : { position : 'none' },
-          'width':300,
-          'height':250,
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-        chart.draw(data, options);
-      }
-    </script>
-
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
-
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Year', 'Sales', 'Expenses'],
-      ['2004',  1000,      400],
-      ['2005',  1170,      460],
-      ['2006',  660,       1120],
-      ['2007',  1030,      540]
-    ]);
-
-    var options = {
-      title: 'Company Performance',
-      curveType: 'function',
-      legend: { position: 'bottom' },
-      'width':300,
-      
-    };
-
-    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-    chart.draw(data, options);
-  }
-</script> -->
-
     <title>Dashboard</title>
 </head>
 
@@ -336,9 +283,11 @@
                                <img src="./assets/three.png" alt=""/>
                             </div>
                             <div  class="videoSection">
-                               <video class="video" style="max-width:100%;" poster="./assets/video thumbnail.png"
-                              Type="Video/Mp4" ></video>
-                              <i class="fa fa-play-circle"></i>
+                                <video class="video" style="max-width:100%;" poster="./assets/video thumbnail.png"
+                                src="./assets/video.mp4" type="video/mp4">
+                                </video>
+                              <i class="fa fa-play-circle play" aria-hidden="true"></i>
+                              <i class="fa fa-pause pause" aria-hidden="true" style="display:none;"></i>
                             </div>
                             </div>
                         </div>
@@ -352,8 +301,9 @@
                    <img src="./assets/three.png" alt=""/>
                 </div>
                 <div  class="videoSection">
-                   <video class="video" style="max-width:100%;" poster="./assets/video thumbnail.png"
-                  Type="Video/Mp4" ></video>
+                   <video class="video" style="max-width:100%;"  poster="./assets/video thumbnail.png"
+                    src="./assets/video.mp4" type="video/mp4">
+                  </video>
                   <i class="fa fa-play-circle"></i>
                 </div>
                 </div>
